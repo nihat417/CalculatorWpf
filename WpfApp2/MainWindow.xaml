@@ -53,6 +53,7 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="1" Grid.Column="1" >
@@ -62,7 +63,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="✓"  
+                    Content="√"  
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="1" Grid.Column="2" >
@@ -73,6 +75,7 @@
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
                     Content="x²"  
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="1" Grid.Column="3" >
@@ -82,7 +85,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="1/x">
+                    Content="1/x"
+                    Click="Button_Click">
                 </Button>
             </DockPanel>
 
@@ -95,6 +99,7 @@
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2" 
                     Content="CE"  
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="2" Grid.Column="1" >
@@ -104,7 +109,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="C"                      
+                    Content="C"
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="2" Grid.Column="2" >
@@ -113,13 +119,8 @@
                     FontSize="30"
                     Padding="0"
                     BorderBrush="WhiteSmoke"
-                    BorderThickness="2">
-                    <Button.Background>
-                        <ImageBrush
-                            ImageSource="C:\Users\Администратор\source\repos\WpfApp2\WpfApp2\Images\cross.png"
-                            Stretch="Fill">
-                        </ImageBrush>
-                    </Button.Background>
+                    BorderThickness="2"
+                    Content="&#88;">
                 </Button>
             </DockPanel>
             <DockPanel Grid.Row="2" Grid.Column="3" >
@@ -129,7 +130,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="÷"                      
+                    Content="/"           
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
 
@@ -141,7 +143,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="7"                      
+                    Content="7"    
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="3" Grid.Column="1" >
@@ -151,7 +154,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="8"                      
+                    Content="8" 
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="3" Grid.Column="2" >
@@ -161,7 +165,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="9"                      
+                    Content="9" 
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="3" Grid.Column="3" >
@@ -171,19 +176,21 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="*"                      
+                    Content="*"   
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
 
 
             <DockPanel Grid.Row="4" Grid.Column="0" >
                 <Button 
-                    Margin="2"                     
+                    Margin="0"                     
                     FontSize="30"
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="4"                      
+                    Content="4" 
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="4" Grid.Column="1" >
@@ -193,7 +200,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="5"                 
+                    Content="5"
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="4" Grid.Column="2" >
@@ -203,7 +211,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="6"                      
+                    Content="6"         
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="4" Grid.Column="3" >
@@ -213,7 +222,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="-"                      
+                    Content="-"    
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
 
@@ -225,7 +235,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="1"                      
+                    Content="1"     
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="5" Grid.Column="1" >
@@ -235,7 +246,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="2"                      
+                    Content="2"   
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="5" Grid.Column="2" >
@@ -245,7 +257,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="3"                      
+                    Content="3" 
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="5" Grid.Column="3" >
@@ -255,7 +268,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="+"                      
+                    Content="+" 
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
 
@@ -278,7 +292,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="0"                      
+                    Content="0" 
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="6" Grid.Column="2" >
@@ -288,7 +303,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content=","                      
+                    Content="."      
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="6" Grid.Column="3" >
@@ -299,6 +315,7 @@
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
                     Content="="
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
 
@@ -318,7 +335,10 @@
         <TextBox
             Name="Textbox1"
             Grid.Row="1" 
-            Background="Azure">
+            Background="WhiteSmoke"
+            TextAlignment="Right"
+            FontSize="32"            
+           >
         </TextBox>
     </Grid>
     
