@@ -28,9 +28,7 @@ namespace WpfApp2
         {
             InitializeComponent();
 
-            Textbox1.IsEnabled = false;
-            //Textbox1.Text = "0";
-
+            Textbox1.IsEnabled = false;            
         }
 
         private void Button_Click(object sender,RoutedEventArgs e)
@@ -57,13 +55,9 @@ namespace WpfApp2
                         Textbox1.Text += content;                        
                         break;
                     case "1/x":
+                        if (index == 0)
+                            break;
                         Textbox1.Text = (1.0f / (float.Parse(Textbox1.Text))).ToString();
-                        break;
-                    case "X":
-                        Textbox1.Text = Textbox1.Text.Substring(0,Textbox1.Text.Length - 1);
-                        break;
-                    case "x²":
-                        Textbox1.Text = ((float.Parse(Textbox1.Text))* (float.Parse(Textbox1.Text))).ToString();
                         break;
                     case "CE":
                         Textbox1.Clear();
@@ -74,13 +68,42 @@ namespace WpfApp2
                     case "=":
                         Textbox1.Text = new DataTable().Compute(Textbox1.Text, null).ToString();
                         break;
-                    case "√":
-                        double a = Math.Sqrt(Double.Parse(Textbox1.Text));
-                        Textbox1.Text = a.ToString();
+                    case "±":
+                        if (index == 0)
+                            break;
+                        Textbox1.Text = (-float.Parse(Textbox1.Text)).ToString();
                         break;
+                    case "X":
+                        {
+                        if (index == 0)
+                            break;
+                        else
+                            Textbox1.Text = Textbox1.Text.Substring(0,Textbox1.Text.Length - 1);
+                            break;
+                        }
+                    case "x²":
+                        {
+                            if (index == 0)
+                                break;
+                            Textbox1.Text = ((float.Parse(Textbox1.Text))* (float.Parse(Textbox1.Text))).ToString();
+                        }
+                        break;
+                    case "√":
+                        {
+                            if (index == 0)
+                                break;
+                            else
+                            {
+                                double a = Math.Sqrt(Double.Parse(Textbox1.Text));
+                                Textbox1.Text = a.ToString();
+                                break;
+                            }
+                        }
                     case "%":
                         {
-                            if (char.IsDigit(Textbox1.Text[index - 1]) || Textbox1.Text[index - 1] == '%' && b.Content.ToString() != "%" && b.Content.ToString() != "%")
+                            if (index == 0)
+                                break;
+                            else if (char.IsDigit(Textbox1.Text[index - 1]) || Textbox1.Text[index - 1] == '%' && b.Content.ToString() != "%")
                             {
                                 Textbox1.Text += content;
                             }
@@ -88,7 +111,9 @@ namespace WpfApp2
                         }
                     case "/":
                         {
-                            if (char.IsDigit(Textbox1.Text[index - 1]) || Textbox1.Text[index - 1] == '/' && b.Content.ToString() != "/" && b.Content.ToString() != "/")
+                            if (index == 0)
+                                break;
+                            else if (char.IsDigit(Textbox1.Text[index - 1]) || Textbox1.Text[index - 1] == '/' && b.Content.ToString() != "/" )
                             {
                                 Textbox1.Text += content;
                             }
@@ -96,7 +121,9 @@ namespace WpfApp2
                         }
                     case "*":
                         {
-                            if (char.IsDigit(Textbox1.Text[index - 1]) || Textbox1.Text[index - 1] == '*' && b.Content.ToString() != "*" && b.Content.ToString() != "*")
+                            if (index == 0)
+                                break;
+                            else if (char.IsDigit(Textbox1.Text[index - 1]) || Textbox1.Text[index - 1] == '*' && b.Content.ToString() != "*" && b.Content.ToString() != "*")
                             {
                                 Textbox1.Text += content;
                             }
@@ -104,7 +131,9 @@ namespace WpfApp2
                         }
                     case "-":
                         {
-                            if (char.IsDigit(Textbox1.Text[index - 1]) || Textbox1.Text[index - 1] == '-' && b.Content.ToString() != "-" && b.Content.ToString() != "-")
+                            if (index == 0)
+                                break;
+                            else if (char.IsDigit(Textbox1.Text[index - 1]) || Textbox1.Text[index - 1] == '-' && b.Content.ToString() != "-" )
                             {
                                 Textbox1.Text += content;
                             }
@@ -112,7 +141,9 @@ namespace WpfApp2
                         }
                     case ".":
                         {
-                            if (char.IsDigit(Textbox1.Text[index - 1]) || Textbox1.Text[index - 1] == '.' && b.Content.ToString() != "."  && b.Content.ToString() != ".")
+                            if (index == 0)
+                                break;
+                            else if (char.IsDigit(Textbox1.Text[index - 1]) || Textbox1.Text[index - 1] == '.' && b.Content.ToString() != "." )
                             {
                                 Textbox1.Text += content;
                             }
@@ -120,7 +151,9 @@ namespace WpfApp2
                         }
                     case "+":
                         {
-                            if (char.IsDigit(Textbox1.Text[index - 1]) || Textbox1.Text[index - 1] == '+' && b.Content.ToString() != "+" && b.Content.ToString() != "+")
+                            if (index == 0)
+                                break;
+                            else if (char.IsDigit(Textbox1.Text[index - 1]) || Textbox1.Text[index - 1] == '+' && b.Content.ToString() != "+" )
                             {
                                 Textbox1.Text += content;
                             }

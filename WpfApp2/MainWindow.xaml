@@ -120,7 +120,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="&#88;">
+                    Content="X"
+                    Click="Button_Click">
                 </Button>
             </DockPanel>
             <DockPanel Grid.Row="2" Grid.Column="3" >
@@ -282,7 +283,8 @@
                     Padding="0"
                     BorderBrush="WhiteSmoke"
                     BorderThickness="2"
-                    Content="+-"                      
+                    Content="±"     
+                    Click="Button_Click"
                     ></Button>
             </DockPanel>
             <DockPanel Grid.Row="6" Grid.Column="1" >
@@ -335,6 +337,7 @@
         <TextBox
             Name="Textbox1"
             Grid.Row="1" 
+            Foreground="Black"
             Background="WhiteSmoke"
             TextAlignment="Right"
             FontSize="32"            
